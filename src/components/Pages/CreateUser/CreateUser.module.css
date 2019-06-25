@@ -1,0 +1,72 @@
+@font-face {
+    font-family: Oswald; /* Гарнитура шрифта */
+    src: url('../../../Fonts/oswald/Oswaldregular.woff'); /* Путь к файлу со шрифтом */
+}
+@font-face {
+    font-family: Oswaldextralight; /* Гарнитура шрифта */
+    src: url('../../../Fonts/oswald/Oswaldextralight.woff'); /* Путь к файлу со шрифтом */
+}
+.login{
+    height: 100vh;
+    width: 100%;
+
+}
+.rowStyle{
+    height: 100vh;
+    padding: 10%;
+
+}
+.loginForm{
+    min-height: 200px;
+}
+.form label, .form input{
+    font-family: Oswald;
+    color: rgba(255, 255, 255, 0.5);
+}
+label.MuiFormLabel-root.MuiInputLabel-root.MuiInputLabel-formControl.MuiInputLabel-animated.Mui-required.Mui-focused{
+    color: #7ed321;
+}
+.form input{
+    font-family: Oswald;
+    color: #7ed321;
+}
+.form button{
+    font-family: Oswald;
+    background-color: #7ed321;
+    height: 60px;
+    width: 260px;
+    border-radius: 50px;
+    color: white;
+}
+.form button:hover{
+    background-color: #53971d;
+}
+.form .buttonSubmit{
+    display: block;
+    margin-top: 10%;
+    float: left;
+}
+.timerDescription{
+    text-align: center;
+    color: white;
+    font-family: Oswald;
+    font-size: 7.375rem;
+    font-weight: normal;
+}
+.timer{
+    text-align: center;
+    font-family: Oswaldextralight;
+    font-size: 7.375rem;
+    font-weight: 200;
+    color: #7ed321;
+
+    justify-content: left;
+}
+
+.timerDescriptionBottom{
+    text-align: center;
+    color: white;
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 500;
+}

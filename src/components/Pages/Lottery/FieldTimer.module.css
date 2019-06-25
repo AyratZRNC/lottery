@@ -1,0 +1,53 @@
+.fieldGame{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+    align-content: space-between;
+    overflow: hidden;
+}
+.userItem{
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    box-shadow: 32px 32px 152px 0 rgba(36, 36, 36, 0.24);
+    background-color: #53338a;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: space-between;
+    margin: 30px 0;
+
+}
+
+.userItem__header{
+    font-family: Oswald;
+    font-size: 48px;
+    margin-bottom: 20px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.25;
+    letter-spacing: normal;
+    text-align: center;
+    color: #ffffff;
+}
+.userItem__contact{
+    font-family: Oswald;
+    font-size: 30px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: 3px;
+    text-align: center;
+    color: #7ed321;
+}

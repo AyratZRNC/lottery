@@ -1,0 +1,90 @@
+@import "../../../../node_modules/slick-carousel/slick/slick.css";
+@import "../../../../node_modules/slick-carousel/slick/slick-theme.css";
+
+
+.sliderWrapper{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: stretch;
+}
+.slick-slider{
+    max-width: 1000px;
+    min-width: 250px;
+    height: 100vh;
+    flex-grow: 3;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: stretch;
+    align-content: stretch;
+}
+.slick-slide > div{
+    height: 188px;
+}
+.slick-slide.slick-active.slick-center.slick-current > div {
+    height: 200px;
+}
+.slick-list{
+    height: 100vh !important;
+}
+.left_arrow_box, .right_arrow_box {
+    flex-grow: 1;
+    text-transform: uppercase;
+    position: relative;
+    height: 60px;
+    width: 25%;
+    background: #7ed321;
+    font-family: Oswald;
+    font-size: 1.8rem;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: 3px;
+    text-align: center;
+    color: #ffffff;
+    z-index: 2;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: stretch;
+}
+.left_arrow_box:after {
+    left: 100%;
+    top: 50%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-color: rgba(126, 211, 33, 0);
+    border-left-color: #7ed321;
+    border-width: 30px;
+    margin-top: -30px;
+}
+.right_arrow_box:after{
+    right: 100%;
+    top: 50%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-color: rgba(126, 211, 33, 0);
+    border-right-color: #7ed321;
+    border-width: 30px;
+    margin-top: -30px;
+}

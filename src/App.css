@@ -1,0 +1,5 @@
+.App{
+  background: url("./assets/img/bg-tv.png") no-repeat center center;
+  background-size: cover;
+  min-height: 100vh;
+}
