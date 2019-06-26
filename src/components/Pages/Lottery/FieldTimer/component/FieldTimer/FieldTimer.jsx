@@ -14,7 +14,6 @@ export default class FieldTimer extends Component{
         // });
     };
     render() {
-        console.log(this.props.timer);
         const {timeIsOut, timerRun, time} = this.props;
         return (
 

@@ -5,15 +5,19 @@ import './slick.css';
 import { UserItem } from './UserItem'
 
 class SimpleSlider extends React.Component {
+    constructor(props){
+        super(props)
+    }
 
     render() {
+        console.log(this.props);
         let settings = {
             infinite: true,
             slidesToShow: 5,
             slidesToScroll: 1,
             rtl: false,
             // centerMode: true,
-            focusOnSelect: true,
+            focusOnSelect: false,
             pauseOnHover: false,
             centerPadding: "50px",
             autoplay: this.props.autoplay,
@@ -23,6 +27,8 @@ class SimpleSlider extends React.Component {
             vertical: true,
             arrows: false
         };
+        const { autoplay } = this.props;
+        console.log('Статус autoPlay: ', autoplay);
         return (
                 <Slider {...settings}>
                     <UserItem name={'первый'} workOrg={'ООО Название'}/>

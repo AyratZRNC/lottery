@@ -5,15 +5,15 @@ import FieldGame from "./FieldGame/FieldGame";
 
 export default class Lottery extends React.Component {
     state = {
-        timerRun: true,
-        fieldGamShow: false,
+        timerRun: false,
+        fieldGamShow: true,
         runLottery: true,
         cert1: false,
         cert2: false,
         cert3: false,
-        speed:6000,
-        autoplay: false,
-        time: 130
+        speed: 6000,
+        autoplay: true,
+        time: 120
     };
     timeIsOut = () => {
         console.log('время ожидания розыгрыша закончилось');
@@ -26,7 +26,8 @@ export default class Lottery extends React.Component {
 
     render() {
         const {fieldGamShow, timerRun, runLottery, speed, autoplay, time } = this.state;
-        console.log(timerRun);
+        console.log('Статус таймера: ', timerRun);
+
         if(fieldGamShow){
             return <FieldGame
                 runLottery={runLottery}

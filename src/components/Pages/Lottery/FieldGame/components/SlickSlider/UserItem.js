@@ -1,5 +1,5 @@
 import React from 'react';
-import css from "../../Pages/Lottery/FieldTimer/component/FieldTimer/FieldTimer.module.css";
+import css from "../../../FieldTimer/component/FieldTimer/FieldTimer.module.css";
 import './slick.css';
 
 export const UserItem = (props) => {
