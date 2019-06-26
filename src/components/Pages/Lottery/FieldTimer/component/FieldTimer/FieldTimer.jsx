@@ -1,25 +1,12 @@
 import React, {Component} from 'react';
-import ReactDOM from 'react-dom';
 import { Container, Row, Col } from 'bootstrap-4-react';
-import Timer from '../../Vidget/Timer/Timer'
+import Timer from './component/Timer/Timer'
 import {BImg, Navbar} from 'bootstrap-4-react';
-import css from "../CreateUser/CreateUser.module.css";
-import Header from "../../Vidget/Logo";
-import FieldGame from "./FieldGame";
-
+import css from "../../../../CreateUser/CreateUser.module.css";
+import Header from "../../../../../Vidget/Logo";
 
 export default class FieldTimer extends Component{
-    state = {
-        //start timer
-        timerRun: true,
-        //show fieldGame, lottery drum
-        fieldGamShow: false,
-        //
-        runLottery: true,
-        cert1: false,
-        cert2: false,
-        cert3: false
-    };
+
     timeIsOut = () => {
         console.log('время ожидания розыгрыша закончилось');
         // this.setState({
@@ -28,16 +15,7 @@ export default class FieldTimer extends Component{
     };
     render() {
         console.log(this.props.timer);
-        const timeIsOut = this.timeIsOut;
-        const time = this.props.timer;
-        if (this.state.fieldGamShow) {
-            return (
-                ReactDOM.createPortal(
-                <FieldGame/>,
-                    document.body
-                    )
-            )
-        }
+        const {timeIsOut, timerRun, time} = this.props;
         return (
 
             <Container>
@@ -50,7 +28,7 @@ export default class FieldTimer extends Component{
                             Розыгрыш
                         </div>
                         <div>
-                            <Timer timeIsOut={timeIsOut} timerRun={this.state.timerRun} time={time}/>
+                            <Timer timeIsOut={timeIsOut} timerRun={timerRun} time={time}/>
                         </div>
                         <div className={css.timerDescriptionBottom}>
                             НЕБОЛЬШАЯ ЗАМЕТКА ИЛИ ИНФОРМАЦИЯ О РОЗЫГРЫШЕ

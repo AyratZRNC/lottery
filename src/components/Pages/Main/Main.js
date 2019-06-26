@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 // import {NavLink} from 'react-router-dom';
 import Header from "../../Vidget/Logo";
 import AdminJpg from '../../../assets/img/admin.jpg';
@@ -50,7 +50,7 @@ const useStyles = makeStyles(theme => ({
 
 const cards = [
     {id: 1, img: [AdminJpg], title: 'Панель управления', description: 'Кабинет организатора розыгрыша', link: '/admin' },
-    {id: 1, img: [Room], title: 'Окно просмотра', description: 'Включить просмотр розыгрыша', link: '/timer' },
+    {id: 1, img: [Room], title: 'Окно просмотра', description: 'Включить просмотр розыгрыша', link: '/lottery' },
     {id: 1, img: [People], title: 'Запись участников розыгрыша', description: 'Записать участников розыгрыша', link: '/users' }
     ];
 

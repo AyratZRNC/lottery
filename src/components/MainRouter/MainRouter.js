@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import {Route, Switch} from "react-router-dom";
 import Admin from '../Pages/Admin/Admin';
 import Start from '../Pages/Admin/Start/Start';
-import FieldTimer from '../Pages/Lottery/FieldTimer';
 import Main from '../Pages/Main/Main';
 import CreateUserModule from '../Pages/CreateUser/CreateUser';
+import Lottery from "../Pages/Lottery";
 
 class MainRouter extends Component {
     state = {
@@ -27,7 +27,7 @@ class MainRouter extends Component {
                 <Route exact render={() => <Start/>} path={'/start'}/>
 
                 {/*страница lottery*/}
-                <Route exact render={() => <FieldTimer timer={timer}/>} path={'/timer'}/>
+                <Route exact render={() => <Lottery timer={timer}/>} path={'/lottery'}/>
             </Switch>
         );
     }

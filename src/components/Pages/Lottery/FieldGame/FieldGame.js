@@ -1,13 +1,15 @@
 import React from 'react';
-import './slick.css';
-import { Drum } from "./Drum";
+import '../../../Vidget/SlickSlider/slick.css';
+import { Drum } from "../../../Vidget/SlickSlider/Drum";
 
 
-const FieldGame  = () => {
+const FieldGame  = (props) => {
     return (
         <div className="sliderWrapper">
             <div className="left_arrow_box">Победитель</div>
-                <Drum/>
+                <Drum speed={props.speed}
+                      autoplay={props.autoplay}
+                />
             <div className="right_arrow_box">Победитель</div>
         </div>
 

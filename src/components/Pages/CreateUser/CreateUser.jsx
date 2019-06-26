@@ -6,8 +6,7 @@ import FormControl from "@material-ui/core/FormControl";
 import Input from "@material-ui/core/Input";
 import InputLabel from "@material-ui/core/InputLabel";
 import Header from "../../Vidget/Logo";
-
-
+import Slider from '../../Vidget/Slider'
 export default class CreateUser extends Component{
     state = {
         name: "",
@@ -122,6 +121,7 @@ export default class CreateUser extends Component{
                     </div>
                 </Col>
             </Row>
+            <Slider />
         </Container>
         )
     }

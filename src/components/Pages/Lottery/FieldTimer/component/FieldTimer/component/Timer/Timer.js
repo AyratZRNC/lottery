@@ -1,5 +1,5 @@
 import React from 'react';
-import css from "../../Pages/CreateUser/CreateUser.module.css";
+import css from "../../../../../../CreateUser/CreateUser.module.css";
 import TimerMinSec from "./TimerMinSec";
 
 class Timer extends React.Component {
