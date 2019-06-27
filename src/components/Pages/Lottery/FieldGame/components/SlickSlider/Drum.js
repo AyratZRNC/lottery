@@ -28,7 +28,7 @@ class SimpleSlider extends React.Component {
             centerMode: true,
             focusOnSelect: true,
             pauseOnHover: false,
-            // centerPadding: "60px",
+            centerPadding: "0px",
             autoplay: this.props.autoplay,
             speed: this.props.speed,
             autoplaySpeed: 0,
