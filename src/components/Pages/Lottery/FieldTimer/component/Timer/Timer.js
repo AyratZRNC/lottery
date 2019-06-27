@@ -1,5 +1,5 @@
 import React from 'react';
-import css from "../../../../../../CreateUser/CreateUser.module.css";
+import css from "./../../FieldTimer.module.css";
 import TimerMinSec from "./TimerMinSec";
 
 class Timer extends React.Component {
@@ -13,9 +13,7 @@ class Timer extends React.Component {
         const sec = min * 60;
         return(
             <div className={css.timer}>
-                <div className={css.timer__data}>
-                    <TimerMinSec timerStop={timerStop} timeIsOut={timeIsOut} timerRun={timerRun} sec={sec}/>
-                </div>
+                <TimerMinSec timerStop={timerStop} timeIsOut={timeIsOut} timerRun={timerRun} sec={sec}/>
             </div>
         )
     }

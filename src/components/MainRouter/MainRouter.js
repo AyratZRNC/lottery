@@ -7,25 +7,19 @@ import CreateUserModule from '../Pages/CreateUser/CreateUser';
 import Lottery from "../Pages/Lottery";
 
 class MainRouter extends Component {
-    state = {
-        show: true,
-        timer: 120
-    };
+
 
     render() {
-        const timer = this.state.timer;
+        const timer = this.props.timer;
         return (
             <Switch>
                 {/*страница главная*/}
                 <Route exact render={() => <Main/>} path={'/'}/>
-
                 {/*страница формы записи пользователей*/}
                 <Route exact render={() => <CreateUserModule/>} path={'/users'}/>
-
                 {/*страница админа*/}
                 <Route exact render={() => <Admin/>} path={'/admin'}/>
                 <Route exact render={() => <Start/>} path={'/start'}/>
-
                 {/*страница lottery*/}
                 <Route exact render={() => <Lottery timer={timer}/>} path={'/lottery'}/>
             </Switch>

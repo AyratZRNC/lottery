@@ -46,27 +46,3 @@ label.MuiFormLabel-root.MuiInputLabel-root.MuiInputLabel-formControl.MuiInputLab
     margin-top: 10%;
     float: left;
 }
-.timerDescription{
-    text-align: center;
-    color: white;
-    font-family: Oswald;
-    font-size: 7.375rem;
-    font-weight: normal;
-}
-.timer{
-    text-align: center;
-    font-family: Oswaldextralight;
-    font-size: 7.375rem;
-    font-weight: 200;
-    color: #7ed321;
-
-    justify-content: left;
-}
-
-.timerDescriptionBottom{
-    text-align: center;
-    color: white;
-    font-family: Roboto;
-    font-size: 16px;
-    font-weight: 500;
-}

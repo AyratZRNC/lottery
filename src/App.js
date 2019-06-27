@@ -1,6 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import logo from './logo.svg';
 import MainRouter from './components/MainRouter'
 import './App.css';
 

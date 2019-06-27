@@ -1,5 +1,4 @@
 import React from 'react';
-
 class TimerMinSec extends React.Component {
     constructor(props) {
         super(props);
@@ -66,9 +65,9 @@ class TimerMinSec extends React.Component {
             clearInterval(this.timer);
         }
         return(
-            <div>
+            <>
                 {hours} : {min} : {sec}
-            </div>
+            </>
         );
     }
 }

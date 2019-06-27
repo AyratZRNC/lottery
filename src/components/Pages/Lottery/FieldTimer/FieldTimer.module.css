@@ -1,0 +1,40 @@
+.timerWrapper{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+    align-content: space-between;
+    background: url("../FieldGame/components/img/bgMain.png") no-repeat center center;
+    background-size: cover;
+}
+.timerDescription{
+    text-align: center;
+    font-family: MFred;
+    font-size: 200px;
+    color: #141615;
+}
+.timer{
+    font-family: MFred;
+    font-size: 200px;
+    text-align: center;
+    color: #d22425;
+    justify-content: left;
+}
+
+.timerDescriptionBottom{
+    font-family: Play;
+    font-size: 16px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: 1.6px;
+    text-align: center;
+    color: #141615;
+}

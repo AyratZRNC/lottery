@@ -5,6 +5,7 @@ import { Drum } from "./components/SlickSlider/Drum";
 
 const FieldGame  = (props) => {
     const {speed, autoplay} = props;
+
     return (
         <div className="sliderWrapper">
             <div className="left_arrow_box">Победитель</div>

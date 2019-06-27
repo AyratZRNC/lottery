@@ -4,6 +4,14 @@ import Slider from "react-slick";
 import './slick.css';
 import { UserItem } from './UserItem'
 
+export const Drum  = (props) =>{
+    const { autoplay, speed } = props;
+    return (
+        <SimpleSlider autoplay={autoplay} speed={speed}/>
+    )
+};
+
+
 class SimpleSlider extends React.Component {
     constructor(props){
         super(props)
@@ -12,14 +20,15 @@ class SimpleSlider extends React.Component {
     render() {
         console.log(this.props);
         let settings = {
+            className: "center",
             infinite: true,
-            slidesToShow: 5,
+            slidesToShow: 3,
             slidesToScroll: 1,
             rtl: false,
-            // centerMode: true,
-            focusOnSelect: false,
+            centerMode: true,
+            focusOnSelect: true,
             pauseOnHover: false,
-            centerPadding: "50px",
+            // centerPadding: "60px",
             autoplay: this.props.autoplay,
             speed: this.props.speed,
             autoplaySpeed: 0,
@@ -27,8 +36,8 @@ class SimpleSlider extends React.Component {
             vertical: true,
             arrows: false
         };
-        const { autoplay } = this.props;
-        console.log('Статус autoPlay: ', autoplay);
+
+
         return (
                 <Slider {...settings}>
                     <UserItem name={'первый'} workOrg={'ООО Название'}/>
@@ -44,8 +53,3 @@ class SimpleSlider extends React.Component {
     }
 }
 
-export const Drum  =() =>{
-        return (
-            <SimpleSlider/>
-        )
-};
