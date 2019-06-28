@@ -8,11 +8,11 @@ const FieldGame  = (props) => {
 
     return (
         <div className="sliderWrapper">
-            <div className="left_arrow_box">Победитель</div>
+            <div className="left_arrow_box"><span>Победитель</span></div>
                 <Drum speed={speed}
                       autoplay={autoplay}
                 />
-            <div className="right_arrow_box">Победитель</div>
+            <div className="right_arrow_box"><span>Победитель</span></div>
         </div>
 
     );

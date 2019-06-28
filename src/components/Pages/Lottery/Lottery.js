@@ -11,11 +11,12 @@ export default class Lottery extends React.Component {
         timerRun: false,
         //включение автопрокрутки слайдера
         autoplay: false,
+        //настройка для админ кабинета
         runLottery: true,
         cert1: false,
         cert2: false,
         cert3: false,
-        speed: 2000,
+        speed: 600,
         time: 120
     };
     timeIsOut = () => {

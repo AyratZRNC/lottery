@@ -12,7 +12,7 @@
 }
 
 .userItem{
-
+    transition: all;
     background-color: rgba(36, 36, 36, 0.24);
     width: 80%;
     height: 280px;
@@ -23,8 +23,11 @@
     align-items: center;
     align-content: space-between;
     margin: 30px auto;
-}
 
+}
+/*.slick-current > div .userItem{*/
+/*    background-color: #3b3b3b;*/
+/*}*/
 .userItem__header{
     font-family: Mfred;
     font-size: 48px;
@@ -47,4 +50,14 @@
     letter-spacing: 3px;
     text-align: center;
     color: #d22425;
+}
+@media screen and (max-width: 320px){
+
+}
+@media (min-width: 321px) and (max-width: 768px){
+
+}
+
+@media (min-width: 769px) and (max-width: 1023px){
+
 }

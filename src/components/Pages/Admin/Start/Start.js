@@ -4,7 +4,7 @@ import FormControl from "@material-ui/core/FormControl";
 import Input from "@material-ui/core/Input";
 import { Grid, Paper, Container, CssBaseline } from '@material-ui/core';
 import InputLabel from "@material-ui/core/InputLabel";
-import css from '../../Main/menu.module.css';
+import css from '../../Main/Main.module.css';
 import Header from "../../../Vidget/Logo";
 
 

@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import Timer from './component/Timer/Timer'
 import css from "./FieldTimer.module.css";
+import Logo from "../../../../assets/img/ZarnitzaInno_Logo.png"
 
 export default class FieldTimer extends Component{
 
@@ -15,11 +16,16 @@ export default class FieldTimer extends Component{
         return (
 
             <div className={css.timerWrapper}>
-                <div className={css.timerDescription}>
-                    Розыгрыш
+                <div className={css.logo}>
+                    <img src={Logo} alt="ПО Зарница"/>
                 </div>
                 <div>
-                    <Timer timeIsOut={timeIsOut} timerRun={timerRun} time={time}/>
+                    <div className={css.timerDescription}>
+                        Розыгрыш
+                    </div>
+                    <div>
+                        <Timer timeIsOut={timeIsOut} timerRun={timerRun} time={time}/>
+                    </div>
                 </div>
                 <div className={css.timerDescriptionBottom}>
                     НЕБОЛЬШАЯ ЗАМЕТКА ИЛИ ИНФОРМАЦИЯ О РОЗЫГРЫШЕ

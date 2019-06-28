@@ -22,7 +22,7 @@ class SimpleSlider extends React.Component {
         let settings = {
             className: "center",
             infinite: true,
-            slidesToShow: 3,
+            slidesToShow: 5,
             slidesToScroll: 1,
             rtl: false,
             centerMode: true,
@@ -34,7 +34,30 @@ class SimpleSlider extends React.Component {
             autoplaySpeed: 0,
             cssEase: "linear",
             vertical: true,
-            arrows: false
+            arrows: false,
+            responsive: [
+                {
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 5,
+                        slidesToScroll: 1,
+                    }
+                },
+                {
+                    breakpoint: 600,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 1,
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 1
+                    }
+                }
+            ]
         };
 
 

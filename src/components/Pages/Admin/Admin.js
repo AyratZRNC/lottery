@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import {NavLink} from 'react-router-dom';
 import { Container, Row, Col } from 'bootstrap-4-react';
-import css from '../Main/menu.module.css';
+import css from '../Main/Main.module.css';
 import { Card } from 'bootstrap-4-react';
 import Header from "../../Vidget/Logo";
 
