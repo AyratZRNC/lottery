@@ -15,31 +15,29 @@ const cards = [
 export default function Main() {
 
     return (
-        <>
-            <div className={css.mainWrapper}>
-                {cards.map(card => (
-                    <div key={card.title}>
-                        <div className={css.card}>
-                            <div className={css.card__img}>
-                                <img src={card.img} alt={card.description}/>
+        <div className={css.mainWrapper}>
+            {cards.map(card => (
+                <div key={card.title}>
+                    <div className={css.card}>
+                        <div className={css.card__img}>
+                            <img src={card.img} alt={card.description}/>
+                        </div>
+                        <div className={css.card__item}>
+                            <div className={css.card__title}>
+                                {card.title}
                             </div>
-                            <div className={css.card__item}>
-                                <div className={css.card__title}>
-                                    {card.title}
-                                </div>
-                                <div className={css.card__description}>
-                                    {card.description}
-                                </div>
-                            </div>
-                            <div className={css.card__button}>
-                                <NavLink to={card.link}>
-                                    Перейти
-                                </NavLink>
+                            <div className={css.card__description}>
+                                {card.description}
                             </div>
                         </div>
+                        <div className={css.card__button}>
+                            <NavLink to={card.link}>
+                                Перейти
+                            </NavLink>
+                        </div>
                     </div>
-                ))}
-            </div>
-        </>
+                </div>
+            ))}
+        </div>
     );
 }

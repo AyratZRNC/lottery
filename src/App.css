@@ -5,6 +5,8 @@
 html{
   font-size: 100%;
 }
+
+
 @media screen and (max-width: 320px){
   html{
     font-size: 40%;

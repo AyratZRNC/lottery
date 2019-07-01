@@ -6,11 +6,12 @@ import FieldGame from "./FieldGame/FieldGame";
 export default class Lottery extends React.Component {
     state = {
         // включить окно игры
-        fieldGamShow: false,
-        //включение таймера до розыгрыша
-        timerRun: false,
+        fieldGamShow: true,
         //включение автопрокрутки слайдера
         autoplay: false,
+        //включение таймера до розыгрыша
+        timerRun: false,
+
         //настройка для админ кабинета
         runLottery: true,
         cert1: false,

@@ -2,10 +2,9 @@ import React, { Component } from 'react';
 import Button from "@material-ui/core/Button";
 import FormControl from "@material-ui/core/FormControl";
 import Input from "@material-ui/core/Input";
-import { Grid, Paper, Container, CssBaseline } from '@material-ui/core';
+import { Grid, Typography, Container, CssBaseline } from '@material-ui/core';
 import InputLabel from "@material-ui/core/InputLabel";
-import css from '../../Main/Main.module.css';
-import Header from "../../../Vidget/Logo";
+import css from './start.module.css';
 
 
 export default class Start extends Component {
@@ -32,41 +31,59 @@ export default class Start extends Component {
         return (
             <React.Fragment>
                 <CssBaseline/>
-                <Container maxWidth="lg">
+                <Container direction="row"
+                           justify="center"
+                           alignItems="center"
+                           maxWidth="lg"
+                           className={css.startWrapper}>
                     <Grid container lg>
-                        <form className={css.form} onSubmit={this.onSubmit} autoComplete="off">
+                        <form className={css.startWrapper__form}
+                              onSubmit={this.onSubmit}
+                              autoComplete="off">
+                            <Typography variant="subtitle1" gutterBottom>
+                                Укажите время для таймера:
+                            </Typography>
                             <Grid item lg container>
                                 <Grid item container direction="row" alignItems='center'>
                                     <Grid item>
-                                        <Paper>
-                                            <FormControl margin="normal" required>
-                                                <InputLabel htmlFor="name">Укажите время</InputLabel>
-                                                <Input
-                                                    type='number'
-                                                    id="name"
-                                                    name="name"
-                                                    onChange={this.setValue}
-                                                    value={this.state.value}
-                                                />
-                                            </FormControl>
-                                        </Paper>
+                                        <FormControl required>
+                                            <InputLabel htmlFor="name">Укажите время</InputLabel>
+                                            <Input
+                                                type='number'
+                                                id="name"
+                                                name="name"
+                                                onChange={this.setValue}
+                                                value={this.state.value}
+                                            />
+                                        </FormControl>
 
                                     </Grid>
                                     <Grid item>
-                                        <Paper>
-                                            <Button
-                                                onClick={this.StartTimerOn}
-                                                className={css.buttonSubmit}
-                                                type="submit"
-                                            >
-                                                СТАРТ ТАЙМЕРА
-                                            </Button>
-                                        </Paper>
+                                        <Button
+                                            onClick={this.StartTimerOn}
+                                            className="startWrapper__buttonSubmit"
+                                            type="submit">
+                                            СТАРТ ТАЙМЕРА
+                                        </Button>
                                     </Grid>
                                 </Grid>
                             </Grid>
-                            <Grid item sm container>
 
+
+                            <Typography variant="subtitle1" gutterBottom>
+                                Управление
+                            </Typography>
+                            <Grid item lg container>
+                                <Grid item container direction="row" alignItems='center'>
+                                    <Grid item>
+                                        <Button
+                                            onClick={this.StartTimerOn}
+                                            className="startWrapper__buttonSubmit"
+                                            type="submit">
+                                            СТАРТ РОЗЫГРЫША
+                                        </Button>
+                                    </Grid>
+                                </Grid>
                             </Grid>
                         </form>
                     </Grid>

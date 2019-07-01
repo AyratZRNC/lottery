@@ -1,0 +1,18 @@
+.startWrapper{
+    background: #3b3b3b;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    display: flex;
+    font-family: MFred;
+    font-size: 2.25rem;
+    text-align: center;
+    color: #d22425;
+}
+.startWrapper__form{
+    width: 100%;
+    background: #ffffff;
+    padding: 20px;
+
+}
