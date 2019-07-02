@@ -76,9 +76,9 @@ input:focus{
     background-color: #d53839;
 
 }
-@media (min-width: 320px) and (max-width: 568px) and (orientation: portrait){
+@media (min-width: 320px) and (max-width: 667px) and (orientation: portrait){
     .form{
-        height: 100vh;
+        height: 600px;
         flex-direction: column;
         padding-bottom: 100px;
         justify-content: center;
@@ -87,9 +87,14 @@ input:focus{
         position: absolute;
         left: 0;
         bottom: 40px;
+        width: 100%;
+        font-size: 2.5rem;
+    }
+    input {
+        margin: 20px 0 20px 0;
     }
 }
-@media (min-width: 320px) and (max-width: 568px) and (orientation: landscape){
+@media (min-width: 320px) and (max-width: 667px) and (orientation: landscape){
     .form{
         height: auto;
         flex-direction: column;
@@ -106,5 +111,6 @@ input:focus{
         position: absolute;
         left: 0;
         bottom: 10px;
+        font-size: 2.5rem;
     }
 }

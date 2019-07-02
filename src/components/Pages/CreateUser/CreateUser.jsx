@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import css from './CreateUser.module.css';
 import Logo from "../../../assets/img/ZarnitzaInno_Logo.png";
+import Header from "../../Vidget/Logo";
 
 
 export default class CreateUser extends Component{
@@ -20,8 +21,6 @@ export default class CreateUser extends Component{
     handleChange = e => {
         const { name, value } = e.target;
         this.setState({ [name]: value });
-
-
     };
     onSubmit = e => {
         e.preventDefault();
@@ -43,9 +42,7 @@ export default class CreateUser extends Component{
     render() {
         return (
             <div className={css.loginForm}>
-                <div className={css.loginForm__img}>
-                    <img src={Logo} alt="ПО Зарница"/>
-                </div>
+                <Header/>
                 <form className={css.form} onSubmit={this.onSubmit} autoComplete="off">
                     <div className={css.loginForm__col}>
                         <input

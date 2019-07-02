@@ -4,6 +4,7 @@ import css from "./Main.module.css"
 import Admin from '../../../assets/img/panel.png';
 import Room from '../../../assets/img/lottery.png';
 import People from '../../../assets/img/group.png';
+import Header from "../../Vidget/Logo";
 
 
 const cards = [
@@ -16,6 +17,7 @@ export default function Main() {
 
     return (
         <div className={css.mainWrapper}>
+            <Header/>
             {cards.map(card => (
                 <div key={card.title}>
                     <div className={css.card}>

@@ -1,5 +1,5 @@
 .startWrapper{
-    background: #3b3b3b;
+    background: url("../../../../assets/img/bgMain.png");
     height: 100vh;
     justify-content: center;
     align-items: center;
@@ -8,11 +8,16 @@
     font-family: MFred;
     font-size: 2.25rem;
     text-align: center;
-    color: #d22425;
+    color: #000000;
 }
 .startWrapper__form{
     width: 100%;
     background: #ffffff;
+    box-shadow: 0 0 10px #3b3b3b;
     padding: 20px;
+    border: 1px solid #3b3b3b;
+    background: url("../../../../assets/img/bgMain.png");
+    background-size: contain;
+
 
 }

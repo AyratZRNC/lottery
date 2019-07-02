@@ -1,0 +1,50 @@
+.cert{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+
+}
+.cert__block{
+    position: relative;
+    height: 100%;
+    width: 90%;
+    margin: auto;
+    background: url("../../../assets/img/cert_1.jpg") center center no-repeat;
+    /*background-size: contain;*/
+}
+.cert__prize{
+    position: absolute;
+    top: 58%;
+    left: 50%;
+    transform: translateY(-50%);
+    font-family: MFred;
+    font-size: 7.5rem;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #d53839;
+}
+.cert__prize span{
+    color: #000;
+}
+.cert__descriptionBottom{
+    position: absolute;
+    bottom: 20px;
+    right: 50%;
+    transform: translateX(50%);
+    font-family: MFred;
+    font-size: 0.75rem;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: 1.2px;
+    text-align: center;
+    color: #d8001d;
+}

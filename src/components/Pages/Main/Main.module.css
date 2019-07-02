@@ -1,6 +1,7 @@
 .mainWrapper{
     height: 100vh;
     display: flex;
+    position: relative;
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: center;
@@ -82,13 +83,14 @@
     color: #d22425;
 }
 
-@media (min-width: 321px) and (max-width: 767px){
+@media (min-width: 320px) and (max-width: 767px){
     .timerDescription{
         margin-top: 100px;
     }
     .card{
-        width: 300px;
-        height: 500px;
+        width: auto;
+        height: auto;
+        margin-top: 100px;
     }
     .mainWrapper{
         flex-direction: column;
@@ -114,6 +116,7 @@
     }
     .card__button a{
         bottom: 20px;
+        font-size: 2.5rem;
     }
 }
 
@@ -123,8 +126,8 @@
     }
     .card{
         width: 500px;
-        height: 275px;
-        padding: 20px 20px 100px 20px
+        padding: 20px 20px 100px 20px;
+        height: 150px;
     }
     .card__img img{
         height: 66px;
@@ -135,6 +138,7 @@
     }
     .card__button a{
         bottom: 20px;
+        font-size: 2.5rem;
     }
 }
 @media (min-width: 768px) and (max-width: 1024px)  and (orientation: portrait){
@@ -144,6 +148,7 @@
     .card{
         width: 300px;
         height: 300px;
+        margin-top: 100px;
     }
     .mainWrapper{
         flex-direction: column;
@@ -157,6 +162,34 @@
     .card{
         width: 300px;
         height: 300px;
+        margin-top: 100px;
+    }
+    .mainWrapper{
+        flex-direction: column;
+        height: auto;
+    }
+}
+@media (min-width: 1024px) and (max-width: 1366px)  and (orientation: portrait){
+    .timerDescription{
+        margin-top: 100px;
+    }
+    .card{
+        width: 300px;
+        height: 300px;
+    }
+    .mainWrapper{
+        flex-direction: column;
+        height: auto;
+    }
+}
+@media (min-width: 1024px) and (max-width: 1366px) and (orientation: landscape){
+    .timerDescription{
+        margin-top: 100px;
+    }
+    .card{
+        width: 300px;
+        height: 300px;
+
     }
     .mainWrapper{
         flex-direction: column;
