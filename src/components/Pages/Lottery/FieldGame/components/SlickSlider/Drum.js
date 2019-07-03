@@ -1,5 +1,4 @@
 import React from 'react';
-
 import Slider from "react-slick";
 import './slick.css';
 import { UserItem } from './UserItem'
@@ -62,7 +61,7 @@ class SimpleSlider extends React.Component {
 
 
         return (
-                <Slider {...settings}>
+                <Slider  {...settings}>
                     <UserItem name={'первый'} workOrg={'ООО Название'}/>
                     <UserItem name={'второй'} workOrg={'ООО Название'}/>
                     <UserItem name={'третий'} workOrg={'ООО Название'}/>

@@ -7,7 +7,6 @@ import InputLabel from "@material-ui/core/InputLabel";
 import css from './start.module.css';
 import Header from "../../../Vidget/Logo";
 
-
 export default class Start extends Component {
     constructor(props){
         super(props);
@@ -49,7 +48,7 @@ export default class Start extends Component {
                             <Grid item container>
                                 <Grid item>
                                     <FormControl required>
-                                        <InputLabel htmlFor="name">Укажите время</InputLabel>
+                                        <InputLabel htmlFor="name">Укажите время в мин.</InputLabel>
                                         <Input
                                             type='number'
                                             id="name"

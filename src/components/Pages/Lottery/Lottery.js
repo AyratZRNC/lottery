@@ -10,16 +10,28 @@ export default class Lottery extends React.Component {
         // включить окно игры
         fieldGamShow: true,
         //включение автопрокрутки слайдера
-        autoplay: true,
-        //включение таймера до розыгрыша
+        autoplay: false,
+        //включение окна с таймером до розыгрыша
         timerRun: false,
-        //настройка для админ кабинета
-        runLottery: true,
+        //старт лотереи из админ кабинета
+        runLottery: false,
+        //время таймера ожидания до розыгрыша из админ кабинета
+        time: 120,
+        //скорость вращения барабана на автоматической прокрутке
+        speed: 300,
+        //показ сертификата 1 место
         cert1: false,
+        //показ сертификата 2 место
         cert2: false,
+        //показ сертификата 3 место
         cert3: false,
-        speed: 3000,
-        time: 120
+        //сумма за 1 место
+        priz1: 100000,
+        //сумма за 2 место
+        priz2: 75000,
+        //сумма за 3 место
+        priz3: 50000
+
     };
     timeIsOut = () => {
         console.log('время ожидания розыгрыша закончилось');
@@ -29,46 +41,50 @@ export default class Lottery extends React.Component {
     };
 
     render() {
-        const {fieldGamShow, timerRun, runLottery, speed, autoplay, time, cert1, cert2, cert3 } = this.state;
-        console.log('Статус таймера: ', timerRun);
-        if(cert1 && !cert2 && !cert3){
+        const {...data} = this.state;
+        console.log('Статус таймера: ', data.timerRun);
+        if (data.cert1 && !data.cert2 && !data.cert3) {
             return (
                 ReactDOM.createPortal(
-                    <Cert priz={100000}/>,
+                    <Cert priz={data.priz1}/>,
                     document.body
                 )
             );
-        } else if (cert2 && !cert1 && !cert3){
-            return  (
+        } else if (data.cert2 && !data.cert1 && !data.cert3) {
+            return (
                 ReactDOM.createPortal(
-                    <Cert priz={75000}/>,
+                    <Cert priz={data.priz2}/>,
                     document.body
                 )
             );
-        } else if (cert3 && !cert1 && !cert3){
-            return  (
+        } else if (data.cert3 && !data.cert1 && !data.cert2) {
+            return (
                 ReactDOM.createPortal(
-                    <Cert priz={50000}/>,
+                    <Cert priz={data.priz3}/>,
                     document.body
                 )
             );
         }
-        if(fieldGamShow){
-            return(
+        if (data.fieldGamShow) {
+            return (
                 <FieldGame
-                    runLottery={runLottery}
-                    speed={speed}
-                    autoplay={autoplay}
+                    runLottery={data.runLottery}
+                    speed={data.speed}
+                    autoplay={data.autoplay}
                 />
             )
         }
         return (
+            <>
+                {data.cert1 && <Cert priz={data.priz1}/>}
+                {data.cert2 && <Cert priz={data.priz2}/>}
+                {data.cert3 && <Cert priz={data.priz3}/>}
+                <FieldTimer
+                    time={data.time}
+                    timerRun={data.timerRun}
+                    timeIsOut={this.timeIsOut}
+                />
 
-            <FieldTimer
-                time={time}
-                timerRun={timerRun}
-                timeIsOut={this.timeIsOut}
-            />
-        )
+            </>)
     }
 }

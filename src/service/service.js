@@ -1,24 +1,27 @@
 
 
-export default class Service {
-    _apiBase = '';
-
-    async getResource(url){
-        const res = await fetch(`${this._apiBase}${url}`);
-        if(!res.ok){
-            throw new Error(`${url}`)
-        }
-        return await res.json();
-    }
-    getAllPerson(){
-        return this.getResource(`/people/`)
-    }
-    getPerson(id){
-        return this.getResource(`/person/${id}/`)
-    }
-}
+const getData = ({ data }) => data;
+const _apiBase = '/api/';
 
 
+// export const service =
+//     {
+//     async getResource(url){
+//         const res = await fetch(`${this._apiBase}${url}`);
+//         if(!res.ok){
+//             throw new Error(`${url}`)
+//         }
+//         return await res.json();
+//     }
+//     getAllPerson(){
+//         return this.getResource(`/people/`)
+//     }
+//     getPerson(id){
+//         return this.getResource(`/person/${id}/`)
+//     }
+// }
+//
+//
 // const getResource = async (url)=>{
 //     const res = await fetch(url);
 //     if(!res.ok){
@@ -34,8 +37,8 @@ export default class Service {
 //     .catch(err=>{
 //         console.log(err)
 //     })
-
-
+//
+//
 // fetch('https://swapi.co/api/people/1/')
 //     .then((res) => res.json())
 //     .then((body) => console.log(body))

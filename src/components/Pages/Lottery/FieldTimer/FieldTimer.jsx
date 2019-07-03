@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import Timer from './component/Timer/Timer'
 import css from "./FieldTimer.module.css";
 import Logo from "../../../../assets/img/ZarnitzaInno_Logo.png"
+import Header from "../../../Vidget/Logo";
 
 export default class FieldTimer extends Component{
 
@@ -14,11 +15,8 @@ export default class FieldTimer extends Component{
     render() {
         const {timeIsOut, timerRun, time} = this.props;
         return (
-
             <div className={css.timerWrapper}>
-                <div className={css.logo}>
-                    <img src={Logo} alt="ПО Зарница"/>
-                </div>
+                <Header/>
                 <div>
                     <div className={css.timerDescription}>
                         Розыгрыш
