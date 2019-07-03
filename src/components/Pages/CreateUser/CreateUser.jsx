@@ -24,11 +24,6 @@ export default class CreateUser extends Component{
     };
     onSubmit = e => {
         e.preventDefault();
-        const { name } = this.state;
-        localStorage.clear();
-        localStorage.setItem("userName", name);
-        const local = localStorage.getItem("userName");
-        console.log(local);
         this.setState({
             name: "",
             organization: "",
@@ -37,7 +32,21 @@ export default class CreateUser extends Component{
             phone: "",
             simulator: "",
             error: "",}
-            );
+        );
+        const { ...person } = this.state;
+        let player = {
+            name: person.name,
+            userName: person.name,
+            userOrganization: person.organization,
+            email: person.email,
+            phone: person.phone,
+            simulator: person.simulator
+        };
+        localStorage.clear();
+        let playerJson = JSON.stringify(player);
+        localStorage.setItem("участник", playerJson);
+        const currentPlayer = localStorage.getItem("участник");
+        console.log('Принят пользователь', currentPlayer);
     };
     render() {
         return (

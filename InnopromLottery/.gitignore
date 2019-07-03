@@ -1,0 +1,12 @@
+/obj/
+/bin/
+/node_modules/
+/wwwroot/
+/.vscode/
+
+
+
+/App/
+/package.json
+/package-lock.json
+/webpack.config.js

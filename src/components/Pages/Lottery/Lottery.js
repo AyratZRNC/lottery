@@ -10,7 +10,7 @@ export default class Lottery extends React.Component {
         // включить окно игры
         fieldGamShow: true,
         //включение автопрокрутки слайдера
-        autoplay: false,
+        autoplay: true,
         //включение окна с таймером до розыгрыша
         timerRun: false,
         //старт лотереи из админ кабинета
@@ -76,9 +76,6 @@ export default class Lottery extends React.Component {
         }
         return (
             <>
-                {data.cert1 && <Cert priz={data.priz1}/>}
-                {data.cert2 && <Cert priz={data.priz2}/>}
-                {data.cert3 && <Cert priz={data.priz3}/>}
                 <FieldTimer
                     time={data.time}
                     timerRun={data.timerRun}
