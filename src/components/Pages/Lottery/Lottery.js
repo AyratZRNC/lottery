@@ -8,7 +8,7 @@ import {Cert} from "../../Vidget/Cert/Cert";
 export default class Lottery extends React.Component {
     state = {
         // включить окно игры
-        fieldGamShow: true,
+        fieldGamShow: false,
         //включение автопрокрутки слайдера
         autoplay: false,
         //включение окна с таймером до розыгрыша
@@ -16,7 +16,7 @@ export default class Lottery extends React.Component {
         //старт лотереи из админ кабинета
         runLottery: false,
         //время таймера ожидания до розыгрыша из админ кабинета
-        time: 120,
+        // time: 110,
         //скорость вращения барабана на автоматической прокрутке
         speed: 500,
         //показ сертификата 1 место
@@ -42,6 +42,8 @@ export default class Lottery extends React.Component {
 
     render() {
         const {...data} = this.state;
+        const { time } = this.props;
+        console.log("Пропс", this.props);
         console.log('Статус таймера: ', data.timerRun);
         if (data.cert1 && !data.cert2 && !data.cert3) {
             return (
@@ -77,7 +79,7 @@ export default class Lottery extends React.Component {
         return (
             <>
                 <FieldTimer
-                    time={data.time}
+                    time={time}
                     timerRun={data.timerRun}
                     timeIsOut={this.timeIsOut}
                 />

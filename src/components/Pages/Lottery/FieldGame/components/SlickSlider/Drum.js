@@ -41,7 +41,7 @@ export const Drum  = (props) =>{
 
 class SimpleSlider extends React.Component {
     constructor(props){
-        super(props)
+        super(props);
         this.slider = null;
         this.state = {
             users: []
@@ -61,7 +61,7 @@ class SimpleSlider extends React.Component {
                         return false;
                     }
                     return true;
-                })
+                });
 
                 this.setState({
                     users: [ ...others, winner]
