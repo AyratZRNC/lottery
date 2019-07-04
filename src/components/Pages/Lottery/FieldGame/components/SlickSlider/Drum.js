@@ -2,6 +2,7 @@ import React from 'react';
 import Slider from "react-slick";
 import './slick.css';
 import { UserItem } from './UserItem'
+import { service } from '../../../../../../service/service';
 
 export const Drum  = (props) =>{
     const { autoplay, speed } = props;
