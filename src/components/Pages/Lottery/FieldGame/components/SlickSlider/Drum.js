@@ -2,8 +2,10 @@ import React from 'react';
 import Slider from "react-slick";
 import './slick.css';
 import { UserItem } from './UserItem'
+import { service } from '../../../../../../service/service';
 
-//TODO: this shoud be in service layer!
+
+// TODO: this shoud be in service layer!
 const getUsers = () => new Promise(resolve => {
     //get data from server side!
     setTimeout(_ => {
@@ -22,7 +24,12 @@ const getUsers = () => new Promise(resolve => {
             { name: 'третий4', workOrg: 'ООО Название', isWinner: true },
         ])
     }, 2000);
-})
+});
+
+    // const getUsers = async () => await service.getPerson() ;
+    // console.log(getUsers);
+
+
 
 export const Drum  = (props) =>{
     const { autoplay, speed } = props;
@@ -80,8 +87,8 @@ class SimpleSlider extends React.Component {
      */
     render() {
         const { users } = this.state;
-        console.log(this.props);
-        console.log(users);
+        // console.log(this.props);
+        // console.log(users);
         let settings = {
             className: "center",
             infinite: true,

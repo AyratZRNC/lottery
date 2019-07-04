@@ -10,7 +10,7 @@ export default class Lottery extends React.Component {
         // включить окно игры
         fieldGamShow: true,
         //включение автопрокрутки слайдера
-        autoplay: true,
+        autoplay: false,
         //включение окна с таймером до розыгрыша
         timerRun: false,
         //старт лотереи из админ кабинета
@@ -18,7 +18,7 @@ export default class Lottery extends React.Component {
         //время таймера ожидания до розыгрыша из админ кабинета
         time: 120,
         //скорость вращения барабана на автоматической прокрутке
-        speed: 300,
+        speed: 500,
         //показ сертификата 1 место
         cert1: false,
         //показ сертификата 2 место
